@@ -1,0 +1,48 @@
+{% load static %}
+<html>
+    <head>
+        <title>Django Girls blog</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+        <div class="page-header">
+            <h1>
+                <strong> Blog de Actividades</strong>
+            </h1>
+        </div>
+        <div>
+            <h2 class="blogs"> 
+                <em>Blog para la divulgacion de agenda cultural y deportiva</em>
+            </h2>
+            <p>En este blog (en construccion) se divulgarán actividades culturales y deportivas en Suramerica</p>
+            <ul>
+                <li>
+                    <a href="https://djangogirls.org">Noticias deportivas</a>
+                </li>
+                <li>
+                    <a href="https://djangogirls.org">Noticias culturales</a>
+                </li>
+                <li>
+                    <a href="https://djangogirls.org">Agenda deportivas</a>
+                </li>
+                <li>
+                    <a href="https://djangogirls.org">Agenda cultural</a>
+                </li>
+                <li>Más sobre este blog</li>
+            </ul>
+        </div>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+</html>

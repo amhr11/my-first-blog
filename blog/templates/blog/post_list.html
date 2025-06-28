@@ -1,42 +1,12 @@
-<html>
-    <head>
-        <title> Hitoshi Do</title>
-    </head>
-    <body>
-        <div>
-            <h1>
-                <strong> Blog de Actividades</strong>
-            </h1>
-        </div>
-        <div>
-            <h2> 
-                <em>Blog para la divulgacion de agenda cultural y deportiva --</em>
-            </h2>
-            <p>En este blog (en construccion) se divulgarán actividades culturales y deportivas en Suramerica</p>
-            <ul>
-                <li>
-                    <a href="https://djangogirls.org">Noticias deportivas</a>
-                </li>
-                <li>
-                    <a href="https://djangogirls.org">Noticias culturales</a>
-                </li>
-                <li>
-                    <a href="https://djangogirls.org">Agenda deportivas</a>
-                </li>
-                <li>
-                    <a href="https://djangogirls.org">Agenda cultural</a>
-                </li>
-                <li>Más sobre este blog</li>
-            </ul>
-        </div>
-        <div>
-                {% for post in posts %}
-            <div>
-                <p> publicado: {{ post.published_date }}</p>
-                <h2><a href="">{{ post.title }}</a></h2>
-                <p>{{ post.text|linebreaksbr }}</p>
-            </div>
-                {% endfor %}
-        </div>
-        </body>
-</html>
+{% extends 'blog/base.html' %}
+{% block content %}
+                    {% for post in posts %}
+                        <div class="post">
+                            <div class ="date">
+                                <p> publicado: {{ post.published_date }}</p>
+                            </div>
+                                <h2><a href="">{{ post.title }}</a></h2>
+                                <p>{{ post.text|linebreaksbr }}</p>
+                        </div>
+                            {% endfor %}
+{% endblock %}
