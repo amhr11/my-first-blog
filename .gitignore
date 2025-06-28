@@ -1,0 +1,8 @@
+*.pyc
+*~
+__pycache__
+amhr
+# se reemplaza por el nombre del enviroment
+db.sqlite3
+/static
+.DS_Store
